@@ -11,16 +11,26 @@
       <form v-on:submit.prevent="saveNewItem">
         <label for="new-item">New Todo Tofu:</label>
         <input type="text" id="new-item" v-model="newItem">
+
+        <p>Priority</p>
+
+        <input v-model="prio" type="radio" id="priority" name="priority" value="everyday" checked>Everyday</input>
+        <input v-model="prio" type="radio" id="priority" name="priority" value="medium">Medium</input>
+        <input v-model="prio" type="radio" id="priority" name="priority" value="high">High</input>
+
         <input type="submit" value="Add To Your To Do">
+
       </form>
 
       <ul>
-        <li v-for="item in items">
+        <li v-for="(item, index) in items">
           <span>{{item.task}}</span>
+          <span>{{item.priority}}</span>
           <span v-if="item.status">Done!</span>
+          <button v-if="!item.status" v-on:click="doItem(index)">Finished</button>
         </li>
       </ul>
-      
+
     </div>
   </body>
 </html>
