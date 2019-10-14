@@ -1,0 +1,27 @@
+{
+  "name": "list_homework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/james-roberts-web/w7_d1_list_homework.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/james-roberts-web/w7_d1_list_homework/issues"
+  },
+  "homepage": "https://github.com/james-roberts-web/w7_d1_list_homework#readme",
+  "devDependencies": {
+    "webpack": "^4.41.1",
+    "webpack-cli": "^3.3.9"
+  },
+  "dependencies": {
+    "vue": "^2.6.10"
+  }
+}
