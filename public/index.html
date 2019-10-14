@@ -2,8 +2,13 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>LISTORAMA</title>
     <script src="./js/bundle.js"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+
+    </script>
   </head>
   <body>
     <div id = "app">
@@ -14,16 +19,17 @@
 
         <p>Priority</p>
 
-        <input v-model="prio" type="radio" id="priority" name="priority" value="everyday" checked>Everyday</input>
-        <input v-model="prio" type="radio" id="priority" name="priority" value="medium">Medium</input>
-        <input v-model="prio" type="radio" id="priority" name="priority" value="high">High</input>
+        <input class="low-prio" v-model="prio" type="radio" id="priority" name="priority" value="everyday" checked>Everyday</input>
+        <input class="med-prio" v-model="prio" type="radio" id="priority" name="priority" value="medium">Medium</input>
+        <input class="high-prio" v-model="prio" type="radio" id="priority" name="priority" value="high">Your gran's coming round to visit (aka High)</input>
 
         <input type="submit" value="Add To Your To Do">
 
       </form>
 
       <ul>
-        <li v-for="(item, index) in items">
+        <li v-for="(item, index) in items"
+        v-bind:class = "{'done':item.status, 'not-done':!item.status}">
           <span>{{item.task}}</span>
           <span>{{item.priority}}</span>
           <span v-if="item.status">Done!</span>

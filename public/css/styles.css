@@ -1,3 +1,19 @@
 #app {
-  
+  justify-content: center;
+  width: 50%;
+}
+
+li {
+  display:flex;
+  justify-content: space-around;
+  padding: 10px;
+  margin: 5px;
+}
+
+li.done{
+  border: solid 1px green;
+}
+
+li.not-done{
+  border: solid 1px red;
 }
