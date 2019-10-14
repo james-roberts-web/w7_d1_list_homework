@@ -1,19 +1,78 @@
-#app {
+
+body {
+  display: flex;
   justify-content: center;
-  width: 50%;
+  font-family: 'Roboto', sans-serif;
 }
 
+div {
+
+  justify-content: center;
+}
+
+div.input-field{
+  display: flex;
+  justify-content: space-around;
+  margin: 5% 0;
+  font-weight: 700;
+  font-size: 2rem;
+  padding: 10px;
+}
+
+div.priority-field{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: -2em 0;
+  padding: 10px;
+}
+
+div.submit-field{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+#submit-button {
+  height:25px;
+}
+
+#new-item{
+    width: 65%;
+    border-radius: 5px;
+}
+
+#app {
+
+  justify-content: center;
+  width: 70%;
+
+}
+
+ul {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
 li {
   display:flex;
   justify-content: space-around;
   padding: 10px;
-  margin: 5px;
+  margin: 5px 0;
 }
 
 li.done{
+  text-transform: capitalize;
+  background-color: green;
+  color: white;
   border: solid 1px green;
 }
 
 li.not-done{
+  text-transform: capitalize;
+  background-color: red;
+  color: white;
   border: solid 1px red;
 }

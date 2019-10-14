@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>LISTORAMA</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap" rel="stylesheet">
     <script src="./js/bundle.js"></script>
     <link rel="stylesheet" href="./css/styles.css">
 
@@ -14,16 +15,30 @@
     <div id = "app">
 
       <form v-on:submit.prevent="saveNewItem">
-        <label for="new-item">New Todo Tofu:</label>
-        <input type="text" id="new-item" v-model="newItem">
+
+        <div class="input-field">
+
+          <label for="new-item">New To Do:</label>
+          <input type="text" id="new-item" v-model="newItem">
+
+        </div>
+
+        <div class="priority-field">
+
 
         <p>Priority</p>
 
         <input class="low-prio" v-model="prio" type="radio" id="priority" name="priority" value="everyday" checked>Everyday</input>
         <input class="med-prio" v-model="prio" type="radio" id="priority" name="priority" value="medium">Medium</input>
-        <input class="high-prio" v-model="prio" type="radio" id="priority" name="priority" value="high">Your gran's coming round to visit (aka High)</input>
+        <input class="high-prio" v-model="prio" type="radio" id="priority" name="priority" value="high">Your gran's coming round (aka High)</input>
 
-        <input type="submit" value="Add To Your To Do">
+        </div>
+
+        <div class="submit-field">
+
+          <input id="submit-button" type="submit" value="Add To Your To Do">
+
+        </div>
 
       </form>
 
