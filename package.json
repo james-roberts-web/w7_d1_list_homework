@@ -18,8 +18,8 @@
   },
   "homepage": "https://github.com/james-roberts-web/w7_d1_list_homework#readme",
   "devDependencies": {
-    "webpack": "^4.41.1",
-    "webpack-cli": "^3.3.9"
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
   },
   "dependencies": {
     "vue": "^2.6.10"
